@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
-
+import React, { useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
+import Login from "../Login/Login.jsx"; // Importing the Login component
+import Register from "../Register/Register.jsx"; // Importing the Register component
 import "../../styles/header.css";
 
 const navLinks = [
@@ -17,7 +18,6 @@ const navLinks = [
     path: "/cars",
     display: "Cars",
   },
-
   {
     path: "/blogs",
     display: "Blog",
@@ -26,12 +26,33 @@ const navLinks = [
     path: "/contact",
     display: "Contact",
   },
+  {
+    path: "/Login",
+    display: "Login",
+  },
+  {
+    path: "/Register",
+    display: "Register",
+  },
+  
 ];
 
 const Header = () => {
   const menuRef = useRef();
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+
+  const openLogin = () => {
+    setShowLogin(true);
+    setShowRegister(false);
+  };
+
+  const openRegister = () => {
+    setShowRegister(true);
+    setShowLogin(false);
+  };
 
   return (
     <header className="header">
@@ -43,19 +64,19 @@ const Header = () => {
               <div className="header__top__left">
                 <span>Need Help?</span>
                 <span className="header__top__help">
-                  <i class="ri-phone-fill"></i> 8169204667
+                  <i className="ri-phone-fill"></i> 8169204667
                 </span>
               </div>
             </Col>
 
             <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="#" className=" d-flex align-items-center gap-1">
-                  <i class="ri-login-circle-line"></i> Login
+                <Link to="Login" className=" d-flex align-items-center gap-1" onClick={openLogin}>
+                  <i className="ri-login-circle-line"></i> Login
                 </Link>
 
-                <Link to="#" className=" d-flex align-items-center gap-1">
-                  <i class="ri-user-line"></i> Register
+                <Link to="Register" className=" d-flex align-items-center gap-1" onClick={openRegister}>
+                  <i className="ri-user-line"></i> Register
                 </Link>
               </div>
             </Col>
@@ -66,7 +87,9 @@ const Header = () => {
       {/* =============== header middle =========== */}
       <div className="header__middle">
         <Container>
-          <Row>
+          {/* Header middle content */}
+        </Container>
+        <Row>
             <Col lg="4" md="3" sm="4">
               <div className="logo">
                 <h1>
@@ -117,19 +140,17 @@ const Header = () => {
               </button>
             </Col>
           </Row>
-        </Container>
       </div>
 
       {/* ========== main navigation =========== */}
-
       <div className="main__navbar">
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <span className="mobile__menu">
-              <i class="ri-menu-line" onClick={()=>{}}></i>
+              <i className="ri-menu-line" onClick={toggleMenu}></i>
             </span>
 
-            <div className="navigation" onClick={()=>{}}>
+            <div className="navigation" ref={menuRef}>
               <div className="menu">
                 {navLinks.map((item, index) => (
                   <NavLink
@@ -149,13 +170,18 @@ const Header = () => {
               <div className="search__box">
                 <input type="text" placeholder="Search" />
                 <span>
-                  <i class="ri-search-line"></i>
+                  <i className="ri-search-line"></i>
                 </span>
               </div>
             </div>
           </div>
         </Container>
       </div>
+
+      {/* Login and Register Modals */}
+      
+      {showLogin && <Login setShowLogin={setShowLogin} />}
+      {showRegister && <Register setShowRegister={setShowRegister} />}
     </header>
   );
 };

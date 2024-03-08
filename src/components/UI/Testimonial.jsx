@@ -42,10 +42,10 @@ const Testimonial = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        the customer service team was top-notch,
+         ensuring that my rental experience was nothing short of exceptional. 
+        Thanks to READY RENT GO, my trip was smooth, stress-free, and unforgettable. 
+        I'll definitely be using this app for all my future travels!"
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
@@ -60,10 +60,10 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        the customer service team was top-notch,
+         ensuring that my rental experience was nothing short of exceptional. 
+        Thanks to READY RENT GO, my trip was smooth, stress-free, and unforgettable. 
+        I'll definitely be using this app for all my future travels!"
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
@@ -78,17 +78,17 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        the customer service team was top-notch,
+         ensuring that my rental experience was nothing short of exceptional. 
+        Thanks to READY RENT GO, my trip was smooth, stress-free, and unforgettable. 
+        I'll definitely be using this app for all my future travels!"
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava03} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Kevin </h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -96,17 +96,21 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        "Using READY RENT GO for my recent trip was an absolute game-changer! The app's user-friendly interface 
+        made booking a breeze, and I was amazed by the variety of vehicles available.
+        From compact cars to spacious SUVs, there was something for every need and budget. 
+        The best part? The pick-up and drop-off process was incredibly convenient 
+        – no waiting in long lines or dealing with paperwork. Plus, the customer service team was top-notch,
+         ensuring that my rental experience was nothing short of exceptional. 
+        Thanks to READY RENT GO, my trip was smooth, stress-free, and unforgettable. 
+        I'll definitely be using this app for all my future travels!"
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava04} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Kevin</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
